@@ -1,4 +1,4 @@
-Feature: Free CRM Calender Feature
+Feature: Free CRM Contacts Feature
 
 Background:
 
@@ -8,11 +8,13 @@ When user enters "rupalipdas@gmail.com" and "009988PPooii"
 Then user clicks on loginbutton
 Then user is on homepage
 
-Scenario: Navigate to Calender Page
-Given User is on homepage
-When  User clicks on Calender
-Then User clicks on New
 
 
+Scenario: Navigate to Contacts Page
+Given User is on Contacts Page
+Then User clicks on New button
+And User create new contact
+Then click save button 
+Then Close the browser
 
 

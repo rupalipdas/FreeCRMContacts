@@ -9,4 +9,4 @@ Then user is on homepage
 
 Examples:
 |username|password|
-|k.meeraanand@gmail.com|Dhanush123|
+|rupalipdas@gmail.com|009988PPooii|

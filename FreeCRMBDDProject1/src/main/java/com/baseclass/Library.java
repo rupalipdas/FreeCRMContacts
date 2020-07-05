@@ -1,31 +1,23 @@
 package com.baseclass;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeMethod;
-
-import com.reusablefunctions.SeleniumUtility;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Library {
 
 	
-	protected WebDriver driver;
+	protected static WebDriver driver;
 	public static Properties prop;
 	Logger log = Logger.getLogger(Library.class);
 	
@@ -46,7 +38,6 @@ public class Library {
 			} else if (browser.equalsIgnoreCase("chrome")) {
 				WebDriverManager.chromedriver().setup();
 				//System.setProperty("webdriver.chrome.driver",
-						//"C:/Users/meera/Downloads/chromedriver_latest/chromedriver.exe");
 				driver = new ChromeDriver();
 				log.info("chrome Browser is launched ");
 
